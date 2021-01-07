@@ -1,7 +1,7 @@
 dist: xenial
 language: java
 sudo: false
-jdk: openjdk14
+jdk: openjdk11
 install: true
 cache:
   directories:
