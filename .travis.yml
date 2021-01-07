@@ -1,5 +1,5 @@
 language: java
-sudo: false
+sudo: enabled
 dist: xenial
 jdk: openjdk14
 addons:
