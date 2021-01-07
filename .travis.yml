@@ -1,8 +1,12 @@
-dist: xenial
 language: java
-sudo: false
-jdk: openjdk11
-install: true
-cache:
-  directories:
+sudo: true
+dist: xenial
+jdk: openjdk14
+addons:
+  apt:
+    packages:
+      -oracle-java14-installer
+    before_install:
+      - chmod +x mvnw
+   directories:
     - $HOME/.m2
