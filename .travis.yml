@@ -7,6 +7,6 @@ addons:
     packages:
       -oracle-java14-installer
     before_install:
-      - chmod +x mvnw
+      - chmod +x gradlew
    directories:
     - $HOME/.m2
