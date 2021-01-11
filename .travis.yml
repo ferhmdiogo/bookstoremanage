@@ -3,11 +3,17 @@ dist: xenial
 jdk: openjdk14
 install:
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+addons:
+  sonarcloud:
+    organization: SONAR_ORGANIZATION
+    token: $SONAR_TOKEN
+
 script:
-  - mvn test -B
+  - mvn clean package sonar:sonar -P sonar
 cache:
   directories:
     - $HOME/ .m2
+    - $home/.sonar/cache
 notifications:
   email:
     recipients:
